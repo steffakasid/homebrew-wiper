@@ -5,21 +5,21 @@
 class Wiper < Formula
   desc ""
   homepage "https://github.com/steffakasid/wiper"
-  version "0.1"
+  version "0.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.1/wiper_0.1_darwin_amd64.tar.gz"
-      sha256 "74278e8bc66cb4ac0d03c71d0fd3b917da80a4214149da9c5f8c460749c22e1d"
+      url "https://github.com/steffakasid/wiper/releases/download/v0.2/wiper_0.2_darwin_amd64.tar.gz"
+      sha256 "4576d310a726817a875136acc557fb3a7ed79cf0aa36f9f50e379d980df4cd4f"
 
       def install
         bin.install "wiper"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.1/wiper_0.1_darwin_arm64.tar.gz"
-      sha256 "19513811be24766a8c68559815ead21b0b851fe40ea7b90459c4c176cc613103"
+      url "https://github.com/steffakasid/wiper/releases/download/v0.2/wiper_0.2_darwin_arm64.tar.gz"
+      sha256 "561ec8baa939b7c1fa382f65c905a320effecbb5db9dc5a7f091b58d43b8dc73"
 
       def install
         bin.install "wiper"
@@ -29,16 +29,16 @@ class Wiper < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.1/wiper_0.1_linux_amd64.tar.gz"
-      sha256 "eb36d6d7290c91146cf7572e73b4b709c4daa8239d23f630e0af370f0cd76f96"
+      url "https://github.com/steffakasid/wiper/releases/download/v0.2/wiper_0.2_linux_amd64.tar.gz"
+      sha256 "60dcf9903e96d1f839cd56a7e04862cba2d46c69f9beff5148102d8eee7d1e12"
 
       def install
         bin.install "wiper"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.1/wiper_0.1_linux_arm64.tar.gz"
-      sha256 "8c5875d4ac6c74ec6db00c0ea6ccbf52c439e6c7115b6221247542564aa127f3"
+      url "https://github.com/steffakasid/wiper/releases/download/v0.2/wiper_0.2_linux_arm64.tar.gz"
+      sha256 "2d3d858d7fb727a61502ea61f64d98bcec7c0c3ebc6a7232218ee8df6960f0ee"
 
       def install
         bin.install "wiper"
