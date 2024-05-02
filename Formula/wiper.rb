@@ -11,7 +11,7 @@ class Wiper < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/steffakasid/wiper/releases/download/v0.3/wiper_0.3_darwin_amd64.tar.gz"
-      sha256 "31e4666d56d7c58fafdc4ebac7908a1e06c49d83d0716fce8b5972925c4d4b97"
+      sha256 "29a0cdaf501eddf55692a584cbf26c4ce0021fd3ebdb31fb1b489c4c0fa6648e"
 
       def install
         bin.install "wiper"
@@ -19,7 +19,7 @@ class Wiper < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/steffakasid/wiper/releases/download/v0.3/wiper_0.3_darwin_arm64.tar.gz"
-      sha256 "6b58a2ea92b71dc3df847e105552f827396ff604340d637c7f1a518819b403d9"
+      sha256 "a867af799ca67ec889bda5d160110d9cf4f0270ffc3789e548427e60c48156f9"
 
       def install
         bin.install "wiper"
@@ -30,7 +30,7 @@ class Wiper < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/steffakasid/wiper/releases/download/v0.3/wiper_0.3_linux_amd64.tar.gz"
-      sha256 "d4595126f24f880013d44b3b8f4c93237212260005f1eaca5b80d4c28b06c62c"
+      sha256 "91bb5e6f8ae6b55e9e2ae832bb88848efd06df925c07c3703109b7dbe95bd251"
 
       def install
         bin.install "wiper"
@@ -38,7 +38,7 @@ class Wiper < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/steffakasid/wiper/releases/download/v0.3/wiper_0.3_linux_arm64.tar.gz"
-      sha256 "92471aba5df3d246df061ed993b5fb6ec8409450b9d3d5b577a429ad8d93c923"
+      sha256 "fd984621ae15c92aad62cc31644ade678bdbc72ec5997fe5ae12e5c880a16700"
 
       def install
         bin.install "wiper"
