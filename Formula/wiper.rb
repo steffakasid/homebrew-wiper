@@ -5,21 +5,21 @@
 class Wiper < Formula
   desc ""
   homepage "https://github.com/steffakasid/wiper"
-  version "0.7"
-  license "s"Apache-2.0""
+  version "0.8"
+  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.7/wiper_0.7_darwin_amd64.tar.gz"
-      sha256 "48d583e97382a15519b5a7d70af9299a23f9cc6357764313a3d87efbf1294a73"
+      url "https://github.com/steffakasid/wiper/releases/download/v0.8/wiper_0.8_darwin_amd64.tar.gz"
+      sha256 "22359bdceae8f62d93c04268f54099121478f901690329e5d8a44247bfb5b3a6"
 
       def install
         bin.install "wiper"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.7/wiper_0.7_darwin_arm64.tar.gz"
-      sha256 "c3e6b5640984ad12865dd171c1c4d0422cce943d69aff2a4751b5a1a619b95a9"
+      url "https://github.com/steffakasid/wiper/releases/download/v0.8/wiper_0.8_darwin_arm64.tar.gz"
+      sha256 "f5e53cedb7bfa86726a865679c7dd33e885f2830496d6f9aee8ab511983ad552"
 
       def install
         bin.install "wiper"
@@ -30,8 +30,8 @@ class Wiper < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/wiper/releases/download/v0.7/wiper_0.7_linux_amd64.tar.gz"
-        sha256 "53950f9b06298c27da2b707faa2fe53d532cf92a2c370431a173670367d620e4"
+        url "https://github.com/steffakasid/wiper/releases/download/v0.8/wiper_0.8_linux_amd64.tar.gz"
+        sha256 "72496998c17322a983b6b2ee2b9b79ff0f56e477050ea48331c5eb17c4c0e786"
 
         def install
           bin.install "wiper"
@@ -40,8 +40,8 @@ class Wiper < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/wiper/releases/download/v0.7/wiper_0.7_linux_arm64.tar.gz"
-        sha256 "8a2febca7c8ddd7bcb7256032025eb7f4076843581384d4361947aa76459de3f"
+        url "https://github.com/steffakasid/wiper/releases/download/v0.8/wiper_0.8_linux_arm64.tar.gz"
+        sha256 "24efd612b447239b1fba81b5d0093624bab6b1c413b320869e2496aa9bb825f8"
 
         def install
           bin.install "wiper"
