@@ -5,21 +5,21 @@
 class Wiper < Formula
   desc ""
   homepage "https://github.com/steffakasid/wiper"
-  version "0.8"
+  version "0.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.8/wiper_0.8_darwin_amd64.tar.gz"
-      sha256 "22359bdceae8f62d93c04268f54099121478f901690329e5d8a44247bfb5b3a6"
+      url "https://github.com/steffakasid/wiper/releases/download/v0.9/wiper_0.9_darwin_amd64.tar.gz"
+      sha256 "4e4ab71475450d1e938e11adfec6ad0835951543063dae9426ae930e942848ec"
 
       def install
         bin.install "wiper"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.8/wiper_0.8_darwin_arm64.tar.gz"
-      sha256 "f5e53cedb7bfa86726a865679c7dd33e885f2830496d6f9aee8ab511983ad552"
+      url "https://github.com/steffakasid/wiper/releases/download/v0.9/wiper_0.9_darwin_arm64.tar.gz"
+      sha256 "fea4a608b08833d574fb69947a6419bef9bdf9b91c4ff98c28bc47d5f0e20900"
 
       def install
         bin.install "wiper"
@@ -30,8 +30,8 @@ class Wiper < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/wiper/releases/download/v0.8/wiper_0.8_linux_amd64.tar.gz"
-        sha256 "72496998c17322a983b6b2ee2b9b79ff0f56e477050ea48331c5eb17c4c0e786"
+        url "https://github.com/steffakasid/wiper/releases/download/v0.9/wiper_0.9_linux_amd64.tar.gz"
+        sha256 "c21e94ca5836bc705a212c564fb0064e7cdb03695f02fd9b605e74192fbc8977"
 
         def install
           bin.install "wiper"
@@ -40,8 +40,8 @@ class Wiper < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/wiper/releases/download/v0.8/wiper_0.8_linux_arm64.tar.gz"
-        sha256 "24efd612b447239b1fba81b5d0093624bab6b1c413b320869e2496aa9bb825f8"
+        url "https://github.com/steffakasid/wiper/releases/download/v0.9/wiper_0.9_linux_arm64.tar.gz"
+        sha256 "81b39725d248925b12f800872503897f2409df734a37cb9e846253b0c733d470"
 
         def install
           bin.install "wiper"
