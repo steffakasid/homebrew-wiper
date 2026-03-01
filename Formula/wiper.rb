@@ -5,21 +5,21 @@
 class Wiper < Formula
   desc ""
   homepage "https://github.com/steffakasid/wiper"
-  version "0.14"
+  version "1.0.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.14/wiper_0.14_darwin_amd64.tar.gz"
-      sha256 "cf4f4258cb534a0b77ec1903a9aa203860f411ccb6fc1b423e38e3b3a3a5f92b"
+    on_intel do
+      url "https://github.com/steffakasid/wiper/releases/download/v1.0.0/wiper_1.0.0_darwin_amd64.tar.gz"
+      sha256 "2e5fc858b11a55d4e92b231e0acacbfd84ec08d91f841c0f581fcb639282e2aa"
 
       def install
         bin.install "wiper"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.14/wiper_0.14_darwin_arm64.tar.gz"
-      sha256 "13446a8b56614134d05b71e4cce14f6585cd2257b938b0bc6240224b28432cf2"
+    on_arm do
+      url "https://github.com/steffakasid/wiper/releases/download/v1.0.0/wiper_1.0.0_darwin_arm64.tar.gz"
+      sha256 "ac2608cecdc522e53cc8a24ffe71024752a4997b0337f185a98983e4fdd552cb"
 
       def install
         bin.install "wiper"
@@ -28,18 +28,24 @@ class Wiper < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.14/wiper_0.14_linux_amd64.tar.gz"
-      sha256 "0649e05fcf84ffa1528380c0027d83144a6fdff1b56a578e00994e476890664c"
-      def install
-        bin.install "wiper"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/steffakasid/wiper/releases/download/v1.0.0/wiper_1.0.0_linux_amd64.tar.gz"
+        sha256 "a660b01077bf0c3c023ef7182a0487538d8a29e93e79a55a2e3aa762298c8873"
+
+        def install
+          bin.install "wiper"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/wiper/releases/download/v0.14/wiper_0.14_linux_arm64.tar.gz"
-      sha256 "8745976508b093e4b624496988c8ff672e4f926747b777e7d14e115cd4e72814"
-      def install
-        bin.install "wiper"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/steffakasid/wiper/releases/download/v1.0.0/wiper_1.0.0_linux_arm64.tar.gz"
+        sha256 "38cb8b8c0768251216f64b7a72dc6dc90099e79ab89247b479b3bd88d9863d12"
+
+        def install
+          bin.install "wiper"
+        end
       end
     end
   end
